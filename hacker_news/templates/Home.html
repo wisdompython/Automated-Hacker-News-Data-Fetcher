@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block content%}
+
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+        <ol class="news-list-container">
+        <div class="news-lists">
+                {% for item in page_obj %}
+                <li class="news-item">
+                        <p class="news-title"><a href="{{ item.url }}"><i class="fa fa-caret-up" aria-hidden="true"></i>{{item.title}}</a>
+                        </p>
+                        <a class="news-comment" href="{% url 'comment' item.id %}">
+                                <!-- <i class="fa-solid fa-message"></i> -->
+                                <i class=" fa-solid fa-message fa-xs"> {{item.comments_set.all.count}}</i>
+                        </a>    
+                </li>
+                
+                {% endfor %}
+        </div>
+</ol>
+{% include 'paginator.html'%}
+
+{% endblock %}
+    

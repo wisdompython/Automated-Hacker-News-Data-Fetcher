@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content%}
+
+<div style="overflow: hidden; position:relative;"> 
+	<div style="width: 85%; margin: 50px auto; ">
+		<h2>{{item.title}}</h2>
+		{% for comment in comments%}
+			{%if not comment.parent%}
+			<div style="width: 80%; margin-bottom: 20px;">
+				<h3 style="color: rgb(74, 75, 75);"> by :{{comment.by}}</h3>
+				<p>{{comment.text|safe}}</p>
+			</div>
+			{%endif%}
+			{% for child in comment.children%}
+				<div style="color: rgb(31, 171, 171); width: 60%; padding-left: 30px; margin-bottom: 20px;">
+					<h3>by : {{child.by}}</h3>
+					<p>{{child.text|safe}}</p>
+				</div>
+				{% endfor%}
+		{% endfor%}
+	</div>
+</div>
+{% endblock %}

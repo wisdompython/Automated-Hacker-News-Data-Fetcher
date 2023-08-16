@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="page-body">
+        <nav class="nav-container">
+            <div class="nav-items-container">
+                <ul class="nav-items">
+                    <li>Home</li>
+                    <li>Stories</li>
+                    <li>Ask HN</li>
+                    <li>Jobs</li>
+                </ul>
+            </div>
+        </nav>
+        {% block content %}{% endblock %}
+    </body>
+    </div> 
+    
+</html>

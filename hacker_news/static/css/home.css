@@ -1,0 +1,37 @@
+.news-list-container{
+    overflow: hidden;
+    margin: 10px;
+    width: 80%;
+}
+.news-lists{
+    width: 95%;
+    margin: 0 auto;
+}
+.news-item{
+    padding: 2px;
+    width: 100%;
+
+}
+.news-item li{
+    list-style:circle
+}
+a{
+    text-decoration: none;
+    color: black;
+
+}
+
+.news-title{
+    font-size: 13px;
+}
+
+.fa-caret-up {
+    color:rgb(158, 157, 157);
+    padding-bottom: 5px;
+    padding-right: 1%;
+}
+.fa-solid{
+    color:rgb(158, 157, 157);
+
+    
+}
